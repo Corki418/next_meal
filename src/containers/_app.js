@@ -2,8 +2,8 @@ import App, { Container } from 'next/app';
 import React from 'react';
 import { Provider } from 'react-redux';
 import withReduxStore from '../lib/with-redux-store';
-import { ThemeProvider, CSSReset } from "@chakra-ui/core";
 import { CookiesProvider } from 'react-cookie';
+import { ThemeProvider, CSSBaseline } from '@trendmicro/react-styled-ui';
 
 class MyApp extends App {
   render() {
@@ -15,7 +15,7 @@ class MyApp extends App {
 
     return (
       <ThemeProvider>
-        <CSSReset />
+        <CSSBaseline />
         <CookiesProvider>
           <Container>
             <Provider store={reduxStore}>

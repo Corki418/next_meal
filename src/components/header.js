@@ -7,18 +7,16 @@ import ReactGA from 'react-ga';
 import Perfume from 'perfume.js';
 import {
   Button,
-  FormControl,
-  FormErrorMessage,
-  FormLabel,
-  Input,
   Modal,
-  ModalBody,
-  ModalCloseButton,
-  ModalContent,
-  ModalFooter,
-  ModalHeader,
   ModalOverlay,
-} from "@chakra-ui/core";
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Input,
+  TextLabel,
+  Text,
+} from '@trendmicro/react-styled-ui';
 import {
   login,
   logout,
@@ -274,26 +272,21 @@ class Header extends Component {
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Log On</ModalHeader>
-          <ModalCloseButton />
           <ModalBody>
-            <FormControl>
-              <FormLabel htmlFor="account">Account</FormLabel>
+              <TextLabel htmlFor="account">Account</TextLabel>
               <Input
                 type="text"
                 id="account"
                 placeholder="Account"
                 onChange={e => this.onAccountInputChange(e.target.value)}
               />
-            </FormControl>
-            <FormControl>
-              <FormLabel htmlFor="password">Password</FormLabel>
+              <TextLabel htmlFor="password">Password</TextLabel>
               <Input
                 type="password"
                 id="password"
                 placeholder="Password"
                 onChange={e => this.onPasswordInputChange(e.target.value)}
               />
-            </FormControl>
           </ModalBody>
           <ModalFooter>
             <Button
